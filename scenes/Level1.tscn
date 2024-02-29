@@ -1,6 +1,195 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_grass.png" type="Texture" id=2]
+[ext_resource path="res://assets/Familiar Looking Rocket.png" type="Texture" id=3]
+[ext_resource path="res://scenes/AreaTrigger.tscn" type="PackedScene" id=4]
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 128, 128, 0, 45.2, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 126.8, 41.6, 2.00006, 128, 2.00006, 3.20001, 128, 3.20001 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 128, 128, 2.39996, 128, 2.39996, 1.20004, 61.2, 66 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 60.4, 70.8, 125.2, 3.60001, 125.2, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 126.465, 126.747, 7.50952, 125.542, 4.69635, 123.532, 0, 117.504, 0.275696, 12.6142, 1.07947, 9.3992, 4.69635, 2.56728, 11.1264, 0.557892, 127.671, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0.959717, 0.156021, 116.7, 0.959778, 125.14, 4.17479, 128, 11.0067, 127.551, 115.897, 123.934, 123.532, 117.504, 126.747, 0.557861, 126.346 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 128, 73.2977, 0.0429077, 73.2977, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 127.239, 0.959778, 126.837, 72.494, 11.4984, 73.2977, 4.6665, 69.6808, 0.24585, 63.2508, 0.647736, 11.0067, 11.0966, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 8.88824, 0.557892, 119.003, 0.959778, 125.835, 6.18417, 127.844, 10.6048, 127.04, 65.2602, 123.021, 69.2789, 114.582, 73.2977, 12.907, 73.2977, 4.46759, 68.4752, 0.046936, 61.2414, 0, 10.6048, 3.26195, 3.37103 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 11.7014, 0.448822, 119.003, 0.448822, 125.031, 5.67323, 127.04, 10.0939, 127.844, 116.591, 124.227, 123.825, 114.984, 127.844, 11.2995, 127.04, 3.66383, 122.218, 0.850693, 116.993, 0.448807, 9.29013, 4.46759, 4.86948 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 0.467255, 1.04962, 117.012, 0.647766, 123.442, 4.26465, 127.862, 10.2928, 126.657, 66.1538, 121.834, 69.3688, 116.208, 72.1819, 0.467255, 72.1819 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 127.461, 127.844, 116.61, 128, 87.6747, 122.62, 55.9264, 113.376, 31.4118, 100.114, 9.71045, 78.4131, 0.869141, 57.1136, 0.467255, 14.9164, 2.47665, 6.0751, 12.5236, 0.448822, 126.657, 1.25258 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 0.264282, 1.25258, 117.613, 0.448822, 123.641, 4.46759, 128, 11.2995, 127.66, 48.6741, 121.631, 69.9736, 104.351, 95.2919, 75.4154, 112.171, 42.8633, 122.62, 9.10559, 127.844, 0.264282, 127.04 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 12.3063, 0.0779419, 113.086, 0, 122.97, 3.17885, 127.815, 12.4816, 128, 114.957, 124.133, 123.436, 116.768, 128, 10.1745, 128, 2.03461, 121.885, 0, 116.459, 0, 10.9311, 3.97266, 3.17885 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "spritesheet_gr_grass.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 1152, 256 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 128, 128 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 3 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 7, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 6, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 6, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 7, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
 
 [node name="Level1" type="Node2D"]
 
@@ -9,3 +198,25 @@ position = Vector2( 144, 52 )
 collision_layer = 3
 collision_mask = 3
 speed = 300
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+current = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 4, 0, 5, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 65540, 65541, 0, 5, 131072, 0, 1, 131073, 0, 1, 131074, 0, 1, 131075, 0, 7, 131076, 0, 65540, 131078, 0, 5, 131079, 0, 0, 131080, 0, 0, 131081, 0, 4, 196608, 0, 1, 196609, 0, 1, 196610, 0, 1, 196611, 0, 1, 196612, 0, 7, 196613, 0, 65540, 262144, 0, 1, 262145, 0, 1, 262146, 0, 1, 262147, 0, 1, 262148, 0, 1, 262150, 0, 3, 262151, 0, 0, 262153, 0, 65539, 262154, 0, 65536, 262155, 0, 65536, 262156, 0, 65536, 262157, 0, 65536 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1660, 271 )
+texture = ExtResource( 3 )
+
+[node name="AreaTrigger" parent="Sprite" instance=ExtResource( 4 )]
+position = Vector2( -141, -198 )
+scale = Vector2( 0.24, 1 )
+sceneName = "WinScreen"
+
+[node name="AreaTrigger" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1213, 634 )
+scale = Vector2( 5, 1 )
