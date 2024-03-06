@@ -217,13 +217,14 @@ texture = ExtResource( 3 )
 [node name="AreaTrigger" parent="Sprite" instance=ExtResource( 4 )]
 position = Vector2( -141, -198 )
 scale = Vector2( 0.24, 1 )
-sceneName = "WinScreen"
+sceneName = "Basic"
 
 [node name="AreaTrigger" parent="." instance=ExtResource( 4 )]
-position = Vector2( -442, 642 )
-scale = Vector2( 5, 1 )
+position = Vector2( -240, 636 )
+scale = Vector2( 2, 1 )
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2( 303, -204 )
 script = ExtResource( 5 )
 obstacle = ExtResource( 6 )
+start_cooldown = 1

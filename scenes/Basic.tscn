@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/BasicSnow.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/AreaTrigger.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/kenney_platformerpack/PNG/Items/flagYellow1.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Spawner.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Fireball.tscn" type="PackedScene" id=6]
+
+[node name="Basic" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 1420, 110 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( -131059, 0, 65536, -131058, 0, 0, -131057, 0, 65536, -131049, 0, 0, -65524, 0, 65536, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 65536, -65514, 0, 0, -65512, 0, 0, 11, 0, 65536, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 65536, 21, 0, 0, 25, 0, 0, 65538, 0, 5, 65539, 0, 65543, 65540, 0, 65543, 65541, 0, 65543, 65542, 0, 65543, 65543, 0, 65543, 65544, 0, 65543, 65545, 0, 65543, 65546, 0, 65540, 65548, 0, 65536, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 65536, 131075, 0, 65541, 131076, 0, 1, 131077, 0, 1, 131078, 0, 1, 131079, 0, 1, 131080, 0, 1, 131081, 0, 1, 131082, 0, 7, 131083, 0, 65540, 131086, 0, 65540, 131087, 0, 5, 131098, 0, 65536, 196611, 0, 65541, 196612, 0, 1, 196613, 0, 1, 196614, 0, 1, 196615, 0, 1, 196616, 0, 1, 196617, 0, 1, 196618, 0, 1, 196619, 0, 7, 196620, 0, 65540, 196623, 0, 65540, 196624, 0, 5, 196636, 0, 65536, 196637, 0, 65536, 262147, 0, 65541, 262148, 0, 1, 262149, 0, 1, 262150, 0, 1, 262151, 0, 1, 262152, 0, 1, 262153, 0, 1, 262154, 0, 1, 262155, 0, 1, 262156, 0, 7, 262157, 0, 65540, 262160, 0, 65540, 262161, 0, 5, 262163, 0, 65536, 262164, 0, 65536, 262165, 0, 65536, 262166, 0, 65536, 262167, 0, 65536, 262168, 0, 65536, 262175, 0, 65536, 327683, 0, 65541, 327684, 0, 1, 327685, 0, 1, 327686, 0, 1, 327687, 0, 1, 327688, 0, 1, 327689, 0, 1, 327690, 0, 1, 327691, 0, 1, 327692, 0, 1, 327693, 0, 7, 327694, 0, 65540, 327697, 0, 65540, 327710, 0, 65536, 393220, 0, 2, 393221, 0, 2, 393222, 0, 2, 393223, 0, 2, 393224, 0, 2, 393225, 0, 2, 393226, 0, 2, 393227, 0, 2, 393228, 0, 2, 393229, 0, 2, 393230, 0, 7, 393231, 0, 65540, 393244, 0, 65536, 393245, 0, 65536, 458756, 0, 2, 458757, 0, 2, 458758, 0, 2, 458759, 0, 2, 458760, 0, 2, 458761, 0, 2, 458762, 0, 2, 458763, 0, 2, 458764, 0, 2, 458765, 0, 2, 458766, 0, 2, 458767, 0, 7, 458768, 0, 65540, 458779, 0, 65536, 524305, 0, 65537, 524306, 0, 65538, 524307, 0, 65538, 524308, 0, 65538, 524311, 0, 65538, 524312, 0, 65538, 524313, 0, 65538 )
+
+[node name="AreaTrigger" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1484, 1225 )
+scale = Vector2( 4, 1 )
+sceneName = "Basic"
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1827, 169 )
+speed = 477
+GRAVITY = 777
+jump_speed = -477
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3542, 410 )
+scale = Vector2( 0.932335, 1.25878 )
+texture = ExtResource( 4 )
+offset = Vector2( 5, 5 )
+
+[node name="AreaTrigger" parent="Sprite" instance=ExtResource( 2 )]
+position = Vector2( -62.209, -55.6093 )
+scale = Vector2( 0.11, 0.28 )
+sceneName = "WinScreen"
+
+[node name="Spawner1" type="Node2D" parent="."]
+position = Vector2( 2469, -329 )
+script = ExtResource( 5 )
+obstacle = ExtResource( 6 )
+start_cooldown = 1
+
+[node name="Spawner2" type="Node2D" parent="."]
+position = Vector2( 4545, 740 )
+script = ExtResource( 5 )
+obstacle = ExtResource( 6 )
+start_cooldown = 2
+cooldown = 2
+
+[node name="Spawner3" type="Node2D" parent="."]
+position = Vector2( 4410, 150 )
+script = ExtResource( 5 )
+obstacle = ExtResource( 6 )
+cooldown = 4
